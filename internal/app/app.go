@@ -26,5 +26,5 @@ func RunServer() error {
 	log.Info().Msgf("Starting server on port %s", cfg.APP.APP_PORT)
 	log.Info().Msgf("Environment: %s", cfg.APP.APP_ENV)
 
-	return http.ListenAndServe(":8080", nil)
+	return http.ListenAndServe(":"+cfg.APP.APP_PORT, nil)
 }
